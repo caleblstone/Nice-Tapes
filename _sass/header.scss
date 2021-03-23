@@ -1,0 +1,126 @@
+header{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // padding: 20px;
+
+
+  div.tapeNav{
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+
+    div.tapeNum{
+      height: 148px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      margin-right: 20px;
+      font-family: authentic;
+      text-decoration: underline;
+      background-color: rgba(0,0,0,.5);
+      backdrop-filter: blur(3px);
+
+
+
+      input{
+        background-color: rgba(0,0,0,0);
+        border: none;
+        font-size: 80px;
+        color: white;
+        width: 175px;
+      }
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    }
+
+    div.tapeList{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 250px;
+      div.scoll{
+        overflow-x: scroll;
+      }
+      div.tapeInList{
+
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        svg{
+          width: 200px;
+          height: auto;
+          margin-right: 20px;
+
+        }
+        svg.selected{
+          rect.tapeRect{
+            fill: $yellow;
+          }
+        }
+
+
+
+        font-size: 13px;
+
+        div.tapeWords{
+          position: absolute;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          pointer-events: none;
+        }
+      }
+      div.tapeInList svg:hover{
+        rect.tapeRect{
+          fill: $yellow;
+        }
+      }
+    }
+  }
+
+  div.yearNav{
+    margin-left: 250px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    div{
+      display: flex;
+      vertical-align: bottom;
+      justify-content: center;
+
+    }
+
+    div.navigation{
+      background: repeating-linear-gradient(
+        to right,
+        #ffffff,
+        #ffffff 2px,
+        #000000 2px,
+        #000000 10px
+      );
+      width: 85%;
+      margin-bottom: 4px;
+      height: 20px;
+      background-color: red;
+
+    }
+  }
+}

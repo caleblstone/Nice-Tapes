@@ -1,0 +1,40 @@
+<header>
+  <div class="tapeNav">
+    <div class="tapeNum">
+      <!-- put number of tape in here -->
+      <input type="number" name="" value="750">
+    </div>
+    <div class="tapeList">
+      <!-- put adjascent tapes here -->
+      <div class="scroll">
+        <div class="tapeInList">
+          {% for tape in site.tapes %}
+          {% include tape.html%}
+            <div class="tapeWords">
+              <div class="num">{{ tape.number }}</div>
+              <div>
+                Nice Tapes
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+  <div class="yearNav">
+    <div class="1980">
+      1980
+    </div>
+    <div class="navigation">
+
+    </div>
+    <div class="2021">
+      2021
+    </div>
+    <!-- put year navigation here -->
+  </div>
+</header>

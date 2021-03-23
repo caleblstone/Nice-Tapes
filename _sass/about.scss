@@ -1,0 +1,33 @@
+div.tracklist{
+  width: 50%;
+  overflow: scroll;
+  height: 50vh;
+  width: 44vw;
+
+  margin-right: 20px;
+
+
+  img{
+    width: 44vw;
+    object-fit: contain;
+  }
+}
+
+div.about{
+  display: none;
+  width: 50%;
+  overflow: scroll;
+  height: 75vh;
+  width: 44vw;
+
+  margin-right: 20px;
+
+  img{
+    width: 44vw;
+    object-fit: contain;
+  }
+  div.aboutText{
+    font-size: 24px;
+    line-height: 1.4;
+  }
+}

@@ -1,0 +1,24 @@
+body{
+  background-color: black;
+  color: white;
+  font-family: authentic;
+  font-size: 10vh;
+
+  overflow: hidden;
+  
+}
+
+canvas{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  pointer-events: none;
+  background-color: none;
+}
+
+div.mainContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
