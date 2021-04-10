@@ -9,6 +9,16 @@ let widthWin = window.innerWidth
 let heightWin = window.innerHeight
 let numberSelector = document.querySelector("div.tapeNum input")
 let yearNav = document.querySelector("div.yearNav")
+let currentYearDiv = document.querySelector("div.currentYear")
+let yearNavSlider = document.querySelector("div.yearNav input.navigation")
+let audioLink
+
+
+var date
+var year
+date = new Date()
+year = date.getFullYear()
+currentYearDiv.innerHTML = year
 
 tapeRect.forEach((item, i) => {
 
@@ -29,7 +39,11 @@ tapePlayerWords.style.fontSize = boxPercent
 tapePlayerWords.style.width = tapePlayerRectBox.width - 20 + "px"
 tapePlayerWords.style.height = tapePlayerRectBox.height + "px"
 
+
 tapeToSelect[0].classList.add("selected")
+audioLink = tapeToSelect[0].dataset.link
+
+
 
 tapeToSelect.forEach((item, i) => {
 
@@ -44,6 +58,7 @@ tapeToSelect.forEach((item, i) => {
     tapePlayerWordsNum.textContent = tapeWordsNum[i].textContent
     let tapeNumInt = parseInt(tapeWordsNum[i].textContent)
     numberSelector.value = tapeNumInt
+    audioLink = item.dataset.link
 
   })
 
@@ -62,3 +77,26 @@ numberSelector.addEventListener("change", function(){
 });
 
 yearNav.style.width = widthWin - 250 - 20 + "px"
+
+yearNavSlider.addEventListener("change", function(){
+  let numberOfYears = year - 1980
+  yearNavSlider.max = numberOfYears
+
+  selectedYear = parseInt(yearNavSlider.value) + 1980
+
+  console.log(selectedYear);
+
+  tapeToSelect.forEach((item, i) => {
+
+    if (item.classList.contains(selectedYear) == true) {
+      item.scrollIntoView()
+    }
+  });
+
+
+
+
+
+
+
+})

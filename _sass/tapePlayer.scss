@@ -26,7 +26,7 @@ div.tape{
     display: flex;
     justify-content: center;
     align-items: center;
-    button.playButton{
+    button.contButton{
       background: none;
       border: none;
 
@@ -35,6 +35,12 @@ div.tape{
         height: 30px;
         padding: 2px;
       }
+    }
+    button.pauseButt{
+      display: none;
+    }
+    button.contButton:hover{
+      cursor: pointer;
     }
   }
 
@@ -172,8 +178,31 @@ div.tape{
 
     div{
       font-size: 24px;
+
+    }
+
+    div.timeBox{
+      width: 75px;
+      display: flex;
+    }
+    div.timeBoxLeft{
+      justify-content: flex-end;
     }
   }
 
 
+}
+
+path.tapeCircle{
+  animation-duration: 30s;
+  animation-name: rotate;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
 }

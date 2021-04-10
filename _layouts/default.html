@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   </head>
   <body>
+    <canvas id="myCanvas" resize></canvas>
     {{ content }}
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
+
+    <script src=" {{ 'assets/js/paper-full.js' | relative_url}}"></script>
     <script src=" {{ 'assets/js/tapeWords.js' | relative_url }}"></script>
-    <script src=" {{ 'assets/js/tape.js' | relative_url }}"></script>
     <script src=" {{ 'assets/js/buttons.js' | relative_url }}"></script>
+    <script src=" {{ 'assets/js/tapePlayer.js' | relative_url }}"></script>
+    <script type="text/paperscript" src=" {{ 'assets/js/tape.js' | relative_url }}" canvas="myCanvas"></script>
   </body>
 </html>
