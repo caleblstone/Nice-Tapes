@@ -5,16 +5,18 @@ body{
   font-size: 10vh;
 
   overflow: hidden;
-  
+
 }
 
-canvas{
+canvas[resize]{
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: -1;
   pointer-events: none;
   background-color: none;
+  width: 100%;
+  height: 100%;
 }
 
 div.mainContent{
