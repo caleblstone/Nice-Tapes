@@ -8,3 +8,15 @@
 @import "tapePlayer";
 @import "buttons";
 @import "about";
+
+@media screen and (max-width: 800px) {
+  @import "bodyTablet";
+  @import "headerTablet";
+  @import "tapePlayerTablet";
+  @import "buttonsTablet";
+  @import "aboutTablet";
+}
+
+@media screen and (max-width: 600px) {
+
+}

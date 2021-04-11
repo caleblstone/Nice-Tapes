@@ -1,66 +1,147 @@
-div.tape{
-  margin-left: 20px;
+$track-width: 100% !default;
+
+header{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
+  // padding: 20px;
 
-  div.tapeSVG{
-  display: flex;
-  flex-direction: column;
-    svg{
-      width: 44vw;
-      height: auto;
 
-    }
-  }
-  div.tapeWords{
-    position: absolute;
+  div.tapeNav{
+    overflow-x: scroll;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    pointer-events: none;
-  }
-  div.playButtonCont{
-    margin-top: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    button.contButton{
-      background: none;
-      border: none;
+    // background-color: blue;
 
-      img{
-        border: 2px solid white;
-        height: 30px;
-        padding: 2px;
+
+    div.tapeNum{
+      height: 148px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      margin-right: 20px;
+      font-family: authentic;
+      text-decoration: underline;
+      background-color: rgba(0,0,0,1);
+      // backdrop-filter: blur(3px);
+      z-index: 10;
+
+
+
+      input{
+        background-color: rgba(0,0,0,0);
+        border: none;
+        font-size: 80px;
+        color: white;
+        width: 175px;
+      }
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
       }
     }
-    button.pauseButt{
-      display: none;
-    }
-    button.contButton:hover{
-      cursor: pointer;
+
+    div.tapeList{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 250px;
+      div.scoll{
+        overflow-x: scroll;
+      }
+      div.tapeInList{
+
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        cursor: pointer;
+
+        svg{
+          width: 170px;
+          height: 100%;
+          margin-right: 20px;
+
+        }
+        svg.selected{
+          rect.tapeRect{
+            fill: $yellow;
+          }
+        }
+
+        font-size: 11px;
+
+        div.tapeWords{
+          position: absolute;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          pointer-events: none;
+        }
+      }
+      div.tapeInList svg:hover{
+        rect.tapeRect{
+          fill: $yellow;
+        }
+      }
     }
   }
 
-
-
-
-  div.tapeScrub{
+  div.yearNav{
+    display: none
+  }
+  div.yearNav2{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    input{
-      width: 200px;
+    div.yearBox{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      div{
+        display: flex;
+        // vertical-align: bottom;
+        justify-content: center;
+      }
     }
-    $track-color: white !default;
-    $thumb-color: $red !default;
+
+
+    input.navigation{
+      background: repeating-linear-gradient(
+        to right,
+        #ffffff,
+        #ffffff 1px,
+        #000000 1px,
+        #000000 10px
+      );
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 2px;
+      height: 40px;
+
+    }
+    $track-color: rgba(0, 0, 0, 0) !default;
+    $thumb-color: $yellow !default;
 
     $thumb-radius: 8px !default;
-    $thumb-height: 16px !default;
+    $thumb-height: 64px !default;
     $thumb-width: 16px !default;
     $thumb-shadow-size: none;
     $thumb-shadow-blur: none;
@@ -94,7 +175,7 @@ div.tape{
       @include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
       background: $thumb-color;
       border: $thumb-border-width solid $thumb-border-color;
-      border-radius: $thumb-radius;
+      // border-radius: $thumb-radius;
       cursor: pointer;
       height: $thumb-height;
       width: $thumb-width;
@@ -174,36 +255,9 @@ div.tape{
         margin-top: 0;
       }
     }
-
-
-
-    div{
-      font-size: 24px;
-
-    }
-
-    div.timeBox{
-      width: 75px;
-      display: flex;
-    }
-    div.timeBoxLeft{
-      justify-content: flex-end;
-    }
   }
-
-
 }
 
-path.tapeCircle{
-  animation-duration: 30s;
-  animation-name: rotate;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
-}
-@keyframes rotate {
-    to {
-        transform: rotate(360deg);
-    }
+div.packageLayer{
+  display: none;
 }

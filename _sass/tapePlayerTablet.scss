@@ -1,5 +1,6 @@
 div.tape{
   margin-left: 20px;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,10 +8,13 @@ div.tape{
   div.tapeSVG{
   display: flex;
   flex-direction: column;
+  align-items: center;
     svg{
-      width: 44vw;
+      width: 100%;
       height: auto;
-
+      rect,circle,path{
+        stroke-width: 3;
+      }
     }
   }
   div.tapeWords{
@@ -22,7 +26,7 @@ div.tape{
     pointer-events: none;
   }
   div.playButtonCont{
-    margin-top: 8px;
+    margin-top: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +36,7 @@ div.tape{
 
       img{
         border: 2px solid white;
-        height: 30px;
+        height: 64px;
         padding: 2px;
       }
     }
@@ -46,30 +50,28 @@ div.tape{
 
 
 
-
   div.tapeScrub{
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    input{
-      width: 200px;
-    }
-    $track-color: white !default;
-    $thumb-color: $red !default;
 
-    $thumb-radius: 8px !default;
-    $thumb-height: 16px !default;
-    $thumb-width: 16px !default;
+    $track-color: white !default;
+    $thumb-color: $yellow !default;
+
+    $thumb-radius: 16px !default;
+    $thumb-height: 32px !default;
+    $thumb-width: 32px !default;
     $thumb-shadow-size: none;
     $thumb-shadow-blur: none;
     $thumb-shadow-color: rgba(0, 0, 0, .2) !default;
     $thumb-border-width: 0px !default;
-    $thumb-border-color: $red !default;
+    $thumb-border-color: $yellow !default;
 
     $track-width: 75% !default;
-    $track-height: 4px !default;
+    $track-height: 2px !default;
     $track-shadow-size: 0px !default;
     $track-shadow-blur: 0px !default;
     $track-shadow-color: white !default;
@@ -175,11 +177,15 @@ div.tape{
       }
     }
 
-
+    div.scrubberBox{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 64%;
+    }
 
     div{
-      font-size: 24px;
-
+      font-size: 40px;
     }
 
     div.timeBox{

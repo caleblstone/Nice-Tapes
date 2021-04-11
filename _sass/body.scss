@@ -24,3 +24,80 @@ div.mainContent{
   flex-direction: row;
   justify-content: space-between;
 }
+
+div.packageLayer{
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+
+
+  img.package{
+    width: 100%;
+    height: 100vh;
+  }
+
+  div.adBox{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    div.nameAndPassword{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      background-color: #ede7d8;
+      padding: 16px;
+      border-radius: 16px;
+      input{
+        -webkit-appearance: none;
+        background: none;
+        border: none;
+        border-bottom: 4px solid black;
+        font-size: 4vh;
+      }
+      button{
+        -webkit-appearance: none;
+        background: none;
+        font-size: 4vh;
+        border: 4px solid black;
+      }
+      button:hover{
+        border: 4px solid $red;
+        color: $red;
+        cursor: pointer;
+      }
+    }
+  }
+
+  div.houseOfDub{
+    position: absolute;
+    top: 5vh;
+    left: 5%;
+    font-size: 4vh;
+    color: black;
+    line-height: 1.3;
+  }
+
+  img.marley{
+    position: absolute;
+    top: 5vh;
+    right: 5%;
+    height: 175px;
+  }
+}
+
+div.packageLayerMoved{
+  transform:translateX(-100%);
+            -moz-transform:translateX(-100%); /* Firefox 4 */
+            -o-transform:translateX(-100%); /* Opera */
+
+            -webkit-transform:translateX(-100%); /* Safari and Chrome */
+            -webkit-transition-duration:2s;
+
+}

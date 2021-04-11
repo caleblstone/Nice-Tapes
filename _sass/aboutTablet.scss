@@ -1,0 +1,56 @@
+div.tracklist{
+  display: none;
+}
+
+div.tracklist{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  overflow: scroll;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, .9);
+  margin-right: 0px;
+  text-align: right;
+  z-index: 50;
+
+  img{
+    width: 75%;
+    object-fit: contain;
+  }
+}
+
+div.about{
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  overflow: scroll;
+  height: 100vh;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, .9);
+  padding-top: 20px;
+
+    img{
+      margin-left: 20px;
+      width: 75%;
+      object-fit: contain;
+    }
+
+
+  div.aboutText{
+    padding-left: 20px;
+    width: 75%;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+}
+
+div.backButton{
+  position: absolute;
+  display: none;
+  top: 20px;
+  z-index: 60;
+}
