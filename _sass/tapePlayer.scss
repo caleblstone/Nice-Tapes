@@ -48,6 +48,11 @@ div.tape{
 
 
   div.tapeScrub{
+    div.scrubberBox{
+      width: 75%;
+      display: flex;
+      align-items: center;
+    }
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,7 +73,7 @@ div.tape{
     $thumb-border-width: 0px !default;
     $thumb-border-color: $red !default;
 
-    $track-width: 75% !default;
+    $track-width: 100% !default;
     $track-height: 4px !default;
     $track-shadow-size: 0px !default;
     $track-shadow-blur: 0px !default;
