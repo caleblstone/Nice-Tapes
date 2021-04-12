@@ -12,14 +12,13 @@ collections:
     title: tapes
     output: true
 defaults:
-  -
-    scope:
-      path: ""
-      type: "tapes"
-    values:
-      title: ""
-      layout: "default"
-      number: ""
-      year: ""
-      link: ""
-      tracklist: ""
+- scope:
+    path: ''
+    type: tapes
+  values:
+    title: ''
+    layout: default
+    number: ''
+    year: ''
+    link: ''
+    tracklist: ''
