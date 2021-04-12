@@ -1,9 +1,7 @@
 ---
-title: '750'
-number: 750
+title: '751'
+number: 751
 year: 1990
-imageURL: 
-audioURL: 
 layout: default
 ---
 
