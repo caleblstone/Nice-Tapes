@@ -2,12 +2,12 @@
 title: Nice Tapes
 timezone: UTC
 collections:
-  tapes:
-    title: Posts
-    output: true
   posts:
     title: Posts
     output: true
   uploads:
     title: Uploads
+    output: true
+  tapes:
+    title: tapes
     output: true
