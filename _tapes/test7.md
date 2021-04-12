@@ -1,8 +1,8 @@
 ---
-title: hello
-layout: default
-number: 751
+title: '755'
+number: 755
 year: 1980
+layout: default
 ---
 
-Hello
+
