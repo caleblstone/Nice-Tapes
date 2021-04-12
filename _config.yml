@@ -14,8 +14,8 @@ collections:
 defaults:
   -
     scope:
-      path: "tapes"
-      type: "posts"
+      path: ""
+      type: "tapes"
     values:
       title: ""
       layout: "default"
