@@ -11,3 +11,15 @@ collections:
   tapes:
     title: tapes
     output: true
+defaults:
+  -
+    scope:
+      path: "tapes"
+      type: "posts"
+    values:
+      title: ""
+      layout: "default"
+      number: ""
+      year: ""
+      link: ""
+      tracklist: ""
