@@ -1,9 +1,9 @@
 ---
-title: hello
-layout: default
+title: '750'
 number: 750
 year: 1983
 link: https://docs.google.com/uc?export=download&id=1AmxGPY25GZOh8rxl6a-fl1KxHOGoA6P2
+layout: default
 ---
 
-Hello
+
