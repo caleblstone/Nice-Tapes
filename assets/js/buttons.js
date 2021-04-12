@@ -10,9 +10,11 @@ aboutButton.addEventListener("click", function(){
   aboutButton.classList.add("selected");
   trackButton.classList.remove("selected")
   aboutButton.style.zIndex = "55"
-  abtBackButton.style.display = "block"
-  abtBackButton.style.right = "20px"
-  abtBackButton.style.left = "none"
+  if (window.innerWidth < 800) {
+    abtBackButton.style.display = "block"
+    abtBackButton.style.right = "20px"
+    abtBackButton.style.left = "none"
+  }
 })
 
 trackButton.addEventListener("click", function(){
@@ -21,9 +23,12 @@ trackButton.addEventListener("click", function(){
   trackButton.classList.add("selected");
   aboutButton.classList.remove("selected")
   trackButton.style.zIndex = "55"
-  abtBackButton.style.display = "block"
-  abtBackButton.style.left = "20px"
-  abtBackButton.style.right = "none"
+  if (window.innerWidth < 800) {
+    abtBackButton.style.display = "block"
+    abtBackButton.style.left = "20px"
+    abtBackButton.style.right = "none"
+    console.log("hello");
+  }
 })
 
 abtBackButton.addEventListener("click", function(){
