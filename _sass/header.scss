@@ -47,6 +47,9 @@ header{
       input[type=number] {
         -moz-appearance: textfield;
       }
+      input.tapeYearSel{
+        display: none;
+      }
     }
 
     div.tapeList{

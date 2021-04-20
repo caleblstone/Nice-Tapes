@@ -38,8 +38,16 @@ var box5 = bigSVG.getBoundingClientRect()
 
 var percentage
 var adjustedPer
-var radius1 = 55
-var radius2 = 125
+
+if (window.innerWidth > 600) {
+	var radius1or = 55
+	var radius2or = 125
+}
+if (window.innerWidth < 600) {
+	var radius1or = 25
+	var radius2or = 58
+}
+
 
 c1xVal = box1.left + (box1.width / 2)
 c1yVal = box1.top + (box1.height / 2)
@@ -56,14 +64,16 @@ r2yVal = box4.top + (box4.height / 2)
 
 
 
+
 audio.addEventListener("timeupdate", function(){
+
   project.activeLayer.removeChildren();
   paper.view.draw();
 
   percentage = audio.currentTime / audio.duration
   adjustedPer = (percentage * 70)
-  radius2 = adjustedPer + 55
-  radius1 = 125 - adjustedPer
+  radius2 = adjustedPer + radius1or
+  radius1 = radius2or - adjustedPer
 
   circle1 = new Path.Circle(
     new Point(c1xVal, c1yVal), radius1
@@ -198,6 +208,7 @@ pauseButton.addEventListener("click", function(){
 	bigSVG.pauseAnimations()
 
 })
+
 
 
 

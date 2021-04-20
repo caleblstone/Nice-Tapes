@@ -135,7 +135,7 @@ header{
       margin-top: 0px;
       margin-bottom: 2px;
       height: 40px;
-
+      z-index: 50;
     }
     $track-color: rgba(0, 0, 0, 0) !default;
     $thumb-color: $yellow !default;

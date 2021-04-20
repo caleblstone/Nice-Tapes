@@ -18,15 +18,21 @@
 
 
 let playButton = document.querySelector("button.playButt")
+let phonePlayButton = document.getElementById("phonePlayButton")
 let pauseButton = document.querySelector("button.pauseButt")
+let phonePauseButton = document.getElementById("phonePauseButton")
+let phoneFastForward = document.getElementById("phoneFastForward")
+let phoneReverse = document.getElementById("phoneReverse")
 let audio = document.querySelector("audio")
 let audioSource = document.querySelector("audio source")
 let audioScrubber = document.querySelector("input.audioScrubber")
 let timePlayed = document.querySelector("div.timePlayed")
 let timeLeft = document.querySelector("div.timeLeft")
+let tapePlayerPhone = document.querySelector("div.tape")
 
 
 audioSource.src = audioLink
+let playChecker = audioLink
 audio.load()
 
 audioScrubber.value = 0
@@ -41,16 +47,35 @@ tapeToSelect.forEach((item, i) => {
 });
 
 playButton.addEventListener("click", function(){
+
   audio.play()
   playButton.style.display = "none"
   pauseButton.style.display = "block"
 
 })
+phonePlayButton.addEventListener("click", function(){
+
+  audio.play()
+
+})
+
 pauseButton.addEventListener("click", function(){
   audio.pause()
   pauseButton.style.display = "none"
   playButton.style.display = "block"
 })
+phonePauseButton.addEventListener("click", function(){
+  audio.pause()
+})
+
+phoneFastForward.addEventListener("click", function(){
+  audio.playbackRate = 10
+})
+phoneReverse.addEventListener("click", function(){
+  audio.playbackRate = -1.0
+})
+
+
 
 audio.addEventListener("timeupdate", function(){
 
@@ -88,3 +113,22 @@ audio.addEventListener("timeupdate", function(){
     let scrubLeft = scrubberBox.left
 
 })
+
+tapeToSelect.forEach((item, i) => {
+
+  item.addEventListener("click", function(){
+    audio.pause()
+    audioSource.src = audioLink
+    audio.load()
+    playButton.style.display = "block"
+    pauseButton.style.display = "none"
+  })
+
+});
+numberSelector.addEventListener("change", function(){
+  audio.pause()
+  audioSource.src = audioLink
+  audio.load()
+  playButton.style.display = "block"
+  pauseButton.style.display = "none"
+});

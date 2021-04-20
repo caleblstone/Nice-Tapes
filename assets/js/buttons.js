@@ -14,6 +14,16 @@ aboutButton.addEventListener("click", function(){
     abtBackButton.style.display = "block"
     abtBackButton.style.right = "20px"
     abtBackButton.style.left = "none"
+    trackButton.style.zIndex = "1"
+  }
+  if (window.innerWidth <= 600) {
+    abtBackButton.style.display = "block"
+    abtBackButton.style.left = "0px"
+    abtBackButton.style.right = "none"
+    abtBackButton.style.height = "10px"
+    console.log("hello");
+    aboutButton.style.zIndex = "1"
+
   }
 })
 
@@ -28,6 +38,16 @@ trackButton.addEventListener("click", function(){
     abtBackButton.style.left = "20px"
     abtBackButton.style.right = "none"
     console.log("hello");
+    aboutButton.style.zIndex = "1"
+  }
+  if (window.innerWidth <= 600) {
+    abtBackButton.style.display = "block"
+    abtBackButton.style.left = "0px"
+    abtBackButton.style.right = "none"
+    abtBackButton.style.height = "10px"
+    console.log("hello");
+    aboutButton.style.zIndex = "1"
+
   }
 })
 
@@ -39,9 +59,20 @@ abtBackButton.addEventListener("click", function(){
   abtBackButton.style.right = ""
 })
 
-let bottomOfNav = yearNav.getBoundingClientRect().bottom
+if (window.innerWidth > 600) {
+  let bottomOfNav = yearNav.getBoundingClientRect().bottom
 
-let infoHeight = heightWin - bottomOfNav - 20 + "px"
+  let infoHeight = heightWin - bottomOfNav - 20 + "px"
 
-about.style.height = infoHeight
-tracklist.style.height = infoHeight
+  about.style.height = infoHeight
+  tracklist.style.height = infoHeight
+}
+if (window.innerWidth <= 600) {
+  let topMargin = aboutButton.getBoundingClientRect().bottom
+  let bottomMargin = trackButton.getBoundingClientRect().top
+
+  about.style.paddingTop = topMargin + "px"
+  tracklist.style.paddingTop = topMargin - 40 + "px"
+  tracklist.style.height = bottomMargin - 20 + "px"
+  console.log(bottomMargin);
+}

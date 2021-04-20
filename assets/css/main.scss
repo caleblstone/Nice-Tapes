@@ -18,5 +18,9 @@
 }
 
 @media screen and (max-width: 600px) {
-
+  @import "bodyPhone";
+  @import "headerPhone";
+  @import "tapePlayerPhone";
+  @import "buttonsPhone";
+  @import "aboutPhone";
 }

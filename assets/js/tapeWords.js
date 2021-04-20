@@ -7,12 +7,18 @@ let tapePlayerWords = document.querySelector("div.tapeSVG div.tapeWords")
 let tapePlayerWordsNum = document.querySelector("div.tapeSVG div.tapeWords div.num")
 let widthWin = window.innerWidth
 let heightWin = window.innerHeight
-let numberSelector = document.querySelector("div.tapeNum input")
+let numberSelector = document.querySelector("div.tapeNum input.tapeNumSel")
+let yearSelector = document.querySelector("div.tapeNum input.tapeYearSel")
 let yearNav = document.querySelector("div.yearNav")
 let yearNav2 = document.querySelector("div.yearNav2")
 let currentYearDiv = document.querySelector("div.currentYear")
 let yearNavSlider = document.querySelector("div.yearNav input.navigation")
 let yearNavSlider2 = document.querySelector("div.yearNav2 input.navigation")
+let upButton = document.getElementById("upButton")
+let downButton = document.getElementById("downButton")
+let tapeNumber = document.getElementById("tapeNumber")
+
+
 
 let audioLink
 
@@ -64,6 +70,7 @@ tapeToSelect.forEach((item, i) => {
     tapePlayerWordsNum.textContent = tapeWordsNum[i].textContent
     let tapeNumInt = parseInt(tapeWordsNum[i].textContent)
     numberSelector.value = tapeNumInt
+
     audioLink = item.dataset.link
 
   })
@@ -80,7 +87,54 @@ numberSelector.addEventListener("change", function(){
   console.log(numSelec);
   tapeToSelect[numSelec].classList.add("selected")
   tapePlayerWordsNum.textContent = numberSelector.value
+  audioLink = tapeToSelect[numSelec].dataset.link
+  console.log(audioLink);
 });
+
+let selector = 0
+
+upButton.addEventListener("click", function(){
+
+  tapeToSelect.forEach((object, i) => {
+
+    object.classList.remove("selected")
+
+  });
+  selector = selector + 1
+  tapeToSelect[selector].classList.add("selected")
+  tapePlayerWordsNum.textContent = selector + 750
+  audioLink = tapeToSelect[selector].dataset.link
+  let tapeYear = parseInt(tapeToSelect[selector].classList)
+  yearSelector.value = tapeYear
+  console.log(audioLink);
+  tapeNumber.innerHTML = selector + 750
+
+  audio.pause()
+  audioSource.src = audioLink
+  audio.load()
+})
+downButton.addEventListener("click", function(){
+
+  tapeToSelect.forEach((object, i) => {
+
+    object.classList.remove("selected")
+
+  });
+  selector = selector - 1
+  tapeToSelect[selector].classList.add("selected")
+  tapePlayerWordsNum.textContent = selector + 750
+  audioLink = tapeToSelect[selector].dataset.link
+  let tapeYear = parseInt(tapeToSelect[selector].classList)
+  yearSelector.value = tapeYear
+  console.log(audioLink);
+  tapeNumber.innerHTML = selector + 750
+
+  audio.pause()
+  audioSource.src = audioLink
+  audio.load()
+})
+
+
 
 yearNav.style.width = widthWin - 250 - 20 + "px"
 
@@ -114,5 +168,29 @@ yearNavSlider2.addEventListener("change", function(){
       item.scrollIntoView()
     }
   });
+
+})
+
+yearSelector.addEventListener("change", function(){
+  let newYear = yearSelector.value
+  let yearArray = []
+  let iValues = []
+
+  tapeToSelect.forEach((item, i) => {
+    item.classList.remove("selected")
+    if (item.classList.contains(newYear)) {
+      yearArray.push(item)
+      iValues.push(i)
+    }
+  });
+  yearArray[0].classList.add("selected")
+  tapePlayerWordsNum.textContent = iValues[0] + 750
+  audioLink = tapeToSelect[iValues[0]].dataset.link
+
+  tapeNumber.innerHTML = iValues[0] + 750
+
+  audio.pause()
+  audioSource.src = audioLink
+  audio.load()
 
 })

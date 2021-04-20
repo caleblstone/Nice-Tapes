@@ -1,0 +1,73 @@
+div.phoneControls{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  height: 30vh;
+  margin-top: 12vh;
+
+  div.controlButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    div.Control{
+      border: 2px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      padding-right: 0px;
+
+      svg{
+        height: 10vh;
+      }
+    }
+  }
+
+}
+
+div.tape{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+
+  div.tapeScrub{
+    display: none;
+  }
+  div.playButtonCont{
+    display: none;
+  }
+}
+
+div.playerPhoneControls{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  div.phoneControlButton{
+    margin-top: 20px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 5vh;
+    height: 5vh;
+
+    div.pauseButtonSides{
+
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+      width: 3vh;
+      height: 4.5vh;
+    }
+  }
+}

@@ -16,12 +16,13 @@ div.tracklist{
   z-index: 50;
 
   img{
-    width: 75%;
+    width: 100%;
     object-fit: contain;
   }
 }
 
 div.about{
+  // margin-top: 10vh;
   position: absolute;
   display: none;
   top: 0px;
@@ -35,7 +36,7 @@ div.about{
 
     img{
       margin-left: 20px;
-      width: 75%;
+      // width: 75%;
       object-fit: contain;
     }
 
@@ -43,7 +44,7 @@ div.about{
   div.aboutText{
     padding-left: 20px;
     width: 75%;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1.4;
   }
 }
@@ -53,4 +54,7 @@ div.backButton{
   display: none;
   top: 20px;
   z-index: 60;
+  svg{
+    height: 48px;
+  }
 }
