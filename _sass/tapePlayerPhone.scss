@@ -33,6 +33,8 @@ div.phoneControls{
 
 div.tape{
   display: flex;
+  position: fixed;
+  bottom: 10vh;
   flex-direction: column;
   border: 2px solid white;
   border-radius: 10px;

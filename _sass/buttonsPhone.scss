@@ -7,7 +7,7 @@ div.buttons{
   bottom: 0px;
 
   div.abt{
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
   }
@@ -40,7 +40,9 @@ div.buttons{
   }
   div.trk{
     padding-top: 0px;
-
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
   }
 
 }
