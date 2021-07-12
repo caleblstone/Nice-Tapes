@@ -185,29 +185,48 @@ var path2 = new Path.Arc({
 
 playButton.addEventListener("click", function(){
 
-		bigSVG.unpauseAnimations()
-
-
-		ani1.setAttribute("from","360 189 185")
-		ani1.setAttribute("to","0 189 185")
-
-		ani2.setAttribute("from","360 450 185")
-		ani2.setAttribute("to","0 450 185")
-
-		ani3.setAttribute("from","360 151 362")
-		ani3.setAttribute("to","0 151 362")
-
-		ani4.setAttribute("from","360 489 362")
-		ani4.setAttribute("to","0 489 362")
-
-
+	playAnimations()
 })
+phonePlayButton.addEventListener("click", function(){
+
+	playAnimations()
+})
+
+var playAnimations = function(){
+	bigSVG.unpauseAnimations()
+
+
+	ani1.setAttribute("from","360 189 185")
+	ani1.setAttribute("to","0 189 185")
+
+	ani2.setAttribute("from","360 450 185")
+	ani2.setAttribute("to","0 450 185")
+
+	ani3.setAttribute("from","360 151 362")
+	ani3.setAttribute("to","0 151 362")
+
+	ani4.setAttribute("from","360 489 362")
+	ani4.setAttribute("to","0 489 362")
+
+
+}
 
 pauseButton.addEventListener("click", function(){
 
 	bigSVG.pauseAnimations()
 
 })
+phonePauseButton.addEventListener("click", function(){
+	bigSVG.pauseAnimations()
+})
+downButton.addEventListener("click", function(){
+	bigSVG.pauseAnimations()
+})
+upButton.addEventListener("click", function(){
+	bigSVG.pauseAnimations()
+})
+
+
 
 
 

@@ -4,14 +4,17 @@ div.phoneControls{
   justify-content: space-between;
   align-items: center;
   margin: 20px;
-  height: 25vh;
+  height: 15vh;
+  // width: 15vh;
   margin-top: 12vh;
+  // background-color: blue;
 
   div.controlButtons{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     height: 100%;
+    // background-color: red;
 
     div.Control{
       border: 2px solid white;
@@ -22,6 +25,7 @@ div.phoneControls{
       padding-bottom: 10px;
       padding-left: 0px;
       padding-right: 0px;
+      margin-right: 20px;
 
       svg{
         height: 10vh;
@@ -32,13 +36,20 @@ div.phoneControls{
 }
 
 div.tape{
+  // background-color: green;
   display: flex;
-  position: fixed;
-  bottom: 10vh;
   flex-direction: column;
   border: 2px solid white;
   border-radius: 10px;
   padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -20vh;
+
+
+  div.tapeSVG{
+    width: 100%;
+  }
 
   div.tapeScrub{
     display: none;
@@ -52,6 +63,7 @@ div.playerPhoneControls{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 
 
   div.phoneControlButton{

@@ -54,9 +54,7 @@ playButton.addEventListener("click", function(){
 
 })
 phonePlayButton.addEventListener("click", function(){
-
   audio.play()
-
 })
 
 pauseButton.addEventListener("click", function(){
@@ -66,11 +64,13 @@ pauseButton.addEventListener("click", function(){
 })
 phonePauseButton.addEventListener("click", function(){
   audio.pause()
+  audio.playbackRate = 1
 })
 
 phoneFastForward.addEventListener("click", function(){
   audio.playbackRate = 10
 })
+
 phoneReverse.addEventListener("click", function(){
   audio.playbackRate = -1.0
 })
