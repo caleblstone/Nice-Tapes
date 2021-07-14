@@ -16,3 +16,11 @@
 10. Scroll back up and click on the green "save" button in the top right
 
 *The link to the audio files and tracklist images will be determined by our hosting method --- we can add more details of how to find this information once we decide how that is being done.
+
+
+
+**How to Build the Site**
+
+1.  Install all the needed prerequisites for jekyll (these can be found here: <https://jekyllrb.com/docs/>)
+2.  Navigate to the root directory of the project in your terminal
+3.  To build the project, enter the command: $bundle exec jekyll serve
