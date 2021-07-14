@@ -83,7 +83,7 @@ numberSelector.addEventListener("change", function(){
     object.classList.remove("selected")
 
   });
-  let numSelec = numberSelector.value - 750
+  let numSelec = numberSelector.value
   console.log(numSelec);
   tapeToSelect[numSelec].classList.add("selected")
   tapePlayerWordsNum.textContent = numberSelector.value
@@ -102,12 +102,12 @@ upButton.addEventListener("click", function(){
   });
   selector = selector + 1
   tapeToSelect[selector].classList.add("selected")
-  tapePlayerWordsNum.textContent = selector + 750
+  tapePlayerWordsNum.textContent = selector
   audioLink = tapeToSelect[selector].dataset.link
   let tapeYear = parseInt(tapeToSelect[selector].classList)
   yearSelector.value = tapeYear
   console.log(audioLink);
-  tapeNumber.innerHTML = selector + 750
+  tapeNumber.innerHTML = selector
 
   audio.pause()
   audioSource.src = audioLink
@@ -122,12 +122,12 @@ downButton.addEventListener("click", function(){
   });
   selector = selector - 1
   tapeToSelect[selector].classList.add("selected")
-  tapePlayerWordsNum.textContent = selector + 750
+  tapePlayerWordsNum.textContent = selector
   audioLink = tapeToSelect[selector].dataset.link
   let tapeYear = parseInt(tapeToSelect[selector].classList)
   yearSelector.value = tapeYear
   console.log(audioLink);
-  tapeNumber.innerHTML = selector + 750
+  tapeNumber.innerHTML = selector
 
   audio.pause()
   audioSource.src = audioLink
@@ -184,10 +184,10 @@ yearSelector.addEventListener("change", function(){
     }
   });
   yearArray[0].classList.add("selected")
-  tapePlayerWordsNum.textContent = iValues[0] + 750
+  tapePlayerWordsNum.textContent = iValues[0]
   audioLink = tapeToSelect[iValues[0]].dataset.link
 
-  tapeNumber.innerHTML = iValues[0] + 750
+  tapeNumber.innerHTML = iValues[0]
 
   audio.pause()
   audioSource.src = audioLink
