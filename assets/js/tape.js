@@ -112,20 +112,6 @@ audio.addEventListener("timeupdate", function(){
 	var distance2 = Math.sqrt((r2xVal - c2xVal) * (r2xVal - c2xVal) + (r2yVal - c2yVal) * (r2yVal - c2yVal));
 
 
-
-	// circle2Point = new Point(c2xVal, c2yVal)
-	//
-	// circleOffsets = circle5.getOffsetsWithTangent(circle2Point)
-	// console.log(circleOffsets);
-	//
-	// var point = circle5.getPointAt(circleOffsets[1] - 45);
-	//
-	// var line = new Path({
-	//   segments: [point, circle2Point],
-	//   strokeColor: 'blue',
-	// 	strokeWidth: 4,
-	// })
-	//
 	var variable1 = (0 - Math.atan((c1yVal-r1yVal)/(c1xVal-r1xVal))) - Math.asin((radius3 - radius1)/(Math.sqrt((Math.pow((c1xVal-r1xVal),2)) + Math.pow((c1yVal-r1yVal),2))))
 	var variable2 = (0 - Math.atan((c2yVal-r2yVal)/(c2xVal-r2xVal))) + Math.asin((radius4 - radius2)/(Math.sqrt((Math.pow((c2xVal-r2xVal),2)) + Math.pow((c2yVal-r2yVal),2))))
 

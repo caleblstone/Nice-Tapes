@@ -51,9 +51,10 @@ tapePlayerWords.style.height = tapePlayerRectBox.height + "px"
 
 yearNavSlider.value = ((parseInt(tapeToSelect[0].classList))-1980)
 yearNavSlider2.value = ((parseInt(tapeToSelect[0].classList))-1980)
-console.log(parseInt(tapeToSelect[0].classList));
+
 tapeToSelect[0].classList.add("selected")
 audioLink = tapeToSelect[0].dataset.link
+let tracklistURL = tapeToSelect[0].dataset.tracklist
 
 
 
@@ -72,7 +73,11 @@ tapeToSelect.forEach((item, i) => {
     numberSelector.value = tapeNumInt
 
     audioLink = item.dataset.link
+    tracklistURL = item.dataset.imgurl
 
+    let tracklistBox = document.getElementById("tracklistImage")
+    tracklistBox.setAttribute("src",tracklistURL)
+    console.log(tracklistURL);
   })
 
 });
@@ -84,11 +89,11 @@ numberSelector.addEventListener("change", function(){
 
   });
   let numSelec = numberSelector.value
-  console.log(numSelec);
+
   tapeToSelect[numSelec].classList.add("selected")
   tapePlayerWordsNum.textContent = numberSelector.value
   audioLink = tapeToSelect[numSelec].dataset.link
-  console.log(audioLink);
+
 });
 
 let selector = 0
@@ -106,7 +111,7 @@ upButton.addEventListener("click", function(){
   audioLink = tapeToSelect[selector].dataset.link
   let tapeYear = parseInt(tapeToSelect[selector].classList)
   yearSelector.value = tapeYear
-  console.log(audioLink);
+
   tapeNumber.innerHTML = selector
 
   audio.pause()
@@ -126,7 +131,7 @@ downButton.addEventListener("click", function(){
   audioLink = tapeToSelect[selector].dataset.link
   let tapeYear = parseInt(tapeToSelect[selector].classList)
   yearSelector.value = tapeYear
-  console.log(audioLink);
+
   tapeNumber.innerHTML = selector
 
   audio.pause()
@@ -144,7 +149,7 @@ yearNavSlider.addEventListener("change", function(){
 
   selectedYear = parseInt(yearNavSlider.value) + 1980
 
-  console.log(selectedYear);
+
 
   tapeToSelect.forEach((item, i) => {
 
@@ -160,7 +165,7 @@ yearNavSlider2.addEventListener("change", function(){
 
   selectedYear = parseInt(yearNavSlider2.value) + 1980
 
-  console.log(selectedYear);
+
 
   tapeToSelect.forEach((item, i) => {
 

@@ -21,7 +21,7 @@ aboutButton.addEventListener("click", function(){
     abtBackButton.style.left = "0px"
     abtBackButton.style.right = "none"
     abtBackButton.style.height = "10px"
-    console.log("hello");
+
     aboutButton.style.zIndex = "1"
 
   }
@@ -37,7 +37,7 @@ trackButton.addEventListener("click", function(){
     abtBackButton.style.display = "block"
     abtBackButton.style.left = "20px"
     abtBackButton.style.right = "none"
-    console.log("hello");
+
     aboutButton.style.zIndex = "1"
   }
   if (window.innerWidth <= 600) {
@@ -45,7 +45,7 @@ trackButton.addEventListener("click", function(){
     abtBackButton.style.left = "0px"
     abtBackButton.style.right = "none"
     abtBackButton.style.height = "10px"
-    console.log("hello");
+    
     aboutButton.style.zIndex = "1"
 
   }
@@ -74,5 +74,5 @@ if (window.innerWidth <= 600) {
   about.style.paddingTop = topMargin + "px"
   tracklist.style.paddingTop = topMargin - 40 + "px"
   tracklist.style.height = bottomMargin - 20 + "px"
-  console.log(bottomMargin);
+
 }
