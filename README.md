@@ -17,6 +17,7 @@
 
 *The link to the audio files and tracklist images will be determined by our hosting method --- we can add more details of how to find this information once we decide how that is being done.
 
+**IMPORTANT** Tapes must be uploaded in order starting at tape 1. Skipping a tape will result in an inaccurate tape counter.
 
 
 **How to Build the Site**
